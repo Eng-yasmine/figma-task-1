@@ -1,25 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>figma-task1</title>
+    <title>Gourmet Bistro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css"/>
 </head>
 <body>
-<header>
-  <nav class="main-navigation">
-    <a class="logo" href="#">Gourmet Bistro</a>
 
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Menu</a>
-      <a href="#">Our Story</a>
-      <a href="#">Gallery</a>
-    </div>
+    <header>
+        <div class="container">
+            <a class="logo" href="#">
+                <img class="logo__icon" src="./assets/images/chef-hat.png" alt="Gourmet Bistro logo">
+                <span class="logo__text">Gourmet Bistro</span>
+            </a>
 
-    <a class="bt" href="#">Book a Table</a>
-  </nav>
-</header>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="./menu.html">Menu</a>
+                <a href="./ourstory.html">Our Story</a>
+                <a href="#">Gallery</a>
+            </div>
+
+            <a class="btn btn--nav" href="#">Book a Table</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <p class="hero__eyebrow">The Art of Dining</p>
+
+            <h1 class="hero__title">
+                Elevated culinary
+                <span class="hero__accent">experiences</span>
+                for every palate.
+            </h1>
+
+            <p class="hero__text">
+                Discover a symphony of flavors crafted with locally sourced ingredients and exceptional passion.
+            </p>
+
+            <div class="hero__actions">
+                <a class="btn btn--primary" href="./menu.html">
+                    <img class="btn__icon" src="./assets/images/menu-icon.png" alt="">
+                    View Menu
+                </a>
+
+                <a class="btn btn--secondary" href="#">
+                    Book a Table
+                </a>
+            </div>
+
+            <div class="hero__rating">
+                <div class="hero__avatars">
+                    <span class="hero__avatar avatar-1"></span>
+                    <span class="hero__avatar avatar-2"></span>
+                    <span class="hero__avatar avatar-3"></span>
+                </div>
+                <p class="hero__rating-text">
+                    <strong>4.9/5</strong> from over 2,000+ happy diners
+                </p>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
