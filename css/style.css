@@ -224,8 +224,8 @@ header {
     }
 }
 
-/* ========== ABOUT ========== */
-.about {
+/* ========== OUR STORY ========== */
+.our-story {
     width: 100%;
     background: #ffffff;
     display: flex;
@@ -237,7 +237,7 @@ header {
         align-items: center;
         gap: 64px;
 
-        .about__image {
+        .our-story__image {
             width: 45%;
 
             img {
@@ -247,40 +247,40 @@ header {
             }
         }
 
-        .about__content {
+        .our-story__content {
             width: 55%;
             display: flex;
             flex-direction: column;
             gap: 20px;
 
-            .about__title {
+            .our-story__title {
                 font-size: 2.5rem;
                 font-weight: 700;
                 line-height: 1.2;
                 color: #1a1a1a;
 
-                .about__accent-text {
+                .our-story__accent-text {
                     color: #E85D04;
                 }
             }
 
-            .about__text {
+            .our-story__text {
                 font-size: 1rem;
                 line-height: 1.7;
                 color: #666666;
             }
 
-            .about__features {
+            .our-story__features {
                 display: flex;
                 gap: 32px;
                 margin-top: 12px;
 
-                .about__feature {
+                .our-story__feature {
                     display: flex;
                     align-items: flex-start;
                     gap: 12px;
 
-                    .about__feature-icon {
+                    .our-story__feature-icon {
                         width: 40px;
                         height: 40px;
                         background: #FFF0E8;
@@ -339,25 +339,25 @@ header {
         }
     }
 
-    .about {
+    .our-story {
         padding: 56px 20px;
 
         .container {
             flex-direction: column;
             gap: 32px;
 
-            .about__image {
+            .our-story__image {
                 width: 100%;
             }
 
-            .about__content {
+            .our-story__content {
                 width: 100%;
 
-                .about__title {
+                .our-story__title {
                     font-size: 1.8rem;
                 }
 
-                .about__features {
+                .our-story__features {
                     flex-direction: column;
                     gap: 20px;
                 }
