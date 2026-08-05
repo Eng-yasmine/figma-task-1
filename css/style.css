@@ -117,3 +117,44 @@ body {
     border-color: #bb2d3b;
     color: #fff;
 }
+
+/* Footer */
+.site-footer {
+    margin-top: 2rem;
+}
+
+.footer-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.footer-desc {
+    color: var(--muted);
+    max-width: 260px;
+    line-height: 1.6;
+}
+
+.footer-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.footer-links li + li,
+.footer-contact li + li {
+    margin-top: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-contact li {
+    color: var(--muted);
+}
