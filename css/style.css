@@ -1,367 +1,98 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container {
-    width: 100%;
-    max-width: 1216px;
+:root {
+    --primary: #7749F8;
+    --danger: #DC3545;
+    --text: #212529;
+    --muted: #6C757D;
+    --border: #DEE2E6;
 }
 
 body {
-    font-family: "Outfit", sans-serif;
-    color: #1a1a1a;
-    background: #ffffff;
-    min-height: 100vh;
+    background-color: #F8F9FA;
+    color: var(--text);
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ========== HEADER ========== */
-header {
+/* Search */
+.search-form {
     width: 100%;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-    .container {
-        height: 80px;
-        padding: 0 32px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 1.125rem;
-
-            .logo__icon {
-                width: 28px;
-                height: 28px;
-            }
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-
-            a {
-                font-size: 0.95rem;
-                font-weight: 500;
-                color: #4a4a4a;
-            }
-
-            a:hover {
-                color: #E85D04;
-            }
-        }
-
-        .btn--nav {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: #E85D04;
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 0.9rem;
-            padding: 12px 22px;
-            border-radius: 999px;
-        }
-
-        .btn--nav:hover {
-            background: #d45203;
-        }
-    }
+    max-width: 420px;
 }
 
-/* ========== HERO ========== */
-.hero {
-    width: 100%;
-    min-height: calc(100vh - 80px);
-    background-image: url("../assets/images/hero-bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 32px;
-
-    .container {
-        color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 24px;
-
-        .hero__eyebrow {
-            color: #E85D04;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-        }
-
-        .hero__title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.15;
-            max-width: 700px;
-
-            .hero__accent {
-                color: #E85D04;
-            }
-        }
-
-        .hero__text {
-            font-size: 1.05rem;
-            font-weight: 400;
-            line-height: 1.6;
-            color: #ffffff;
-            max-width: 560px;
-        }
-
-        .hero__actions {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 14px;
-            margin-top: 8px;
-
-            .btn {
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                font-family: "Outfit", sans-serif;
-                font-weight: 600;
-                font-size: 0.95rem;
-                padding: 14px 22px;
-                border-radius: 16px;
-                border: 1px solid transparent;
-                cursor: pointer;
-
-                .btn__icon {
-                    width: 18px;
-                    height: 18px;
-                }
-            }
-
-            .btn--primary {
-                background: #E85D04;
-                color: #ffffff;
-            }
-
-            .btn--primary:hover {
-                background: #d45203;
-            }
-
-            .btn--secondary {
-                background: #333333;
-                color: #ffffff;
-                border-color: #ffffff;
-            }
-
-            .btn--secondary:hover {
-                background: #1a1a1a;
-            }
-        }
-
-        .hero__rating {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
-            margin-top: 12px;
-
-            .hero__avatars {
-                display: flex;
-
-                .hero__avatar {
-                    width: 36px;
-                    height: 36px;
-                    border-radius: 50%;
-                    border: 2px solid #ffffff;
-                    margin-left: -10px;
-                }
-
-                .hero__avatar:first-child {
-                    margin-left: 0;
-                }
-
-                .avatar-1 {
-                    background: #c4a484;
-                }
-
-                .avatar-2 {
-                    background: #8b6f47;
-                }
-
-                .avatar-3 {
-                    background: #d4b896;
-                }
-            }
-
-            .hero__rating-text {
-                font-size: 0.95rem;
-                color: #ffffff;
-
-                strong {
-                    font-weight: 700;
-                }
-            }
-        }
-    }
+.search-group .input-group-text,
+.search-group .form-control {
+    border-color: var(--border);
+    border-radius: 0.5rem;
 }
 
-/* ========== OUR STORY ========== */
-.our-story {
-    width: 100%;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    padding: 80px 32px;
-
-    .container {
-        display: flex;
-        align-items: center;
-        gap: 64px;
-
-        .our-story__image {
-            width: 45%;
-
-            img {
-                width: 100%;
-                display: block;
-                border-radius: 24px;
-            }
-        }
-
-        .our-story__content {
-            width: 55%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-            .our-story__title {
-                font-size: 2.5rem;
-                font-weight: 700;
-                line-height: 1.2;
-                color: #1a1a1a;
-
-                .our-story__accent-text {
-                    color: #E85D04;
-                }
-            }
-
-            .our-story__text {
-                font-size: 1rem;
-                line-height: 1.7;
-                color: #666666;
-            }
-
-            .our-story__features {
-                display: flex;
-                gap: 32px;
-                margin-top: 12px;
-
-                .our-story__feature {
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 12px;
-
-                    .our-story__feature-icon {
-                        width: 40px;
-                        height: 40px;
-                        background: #FFF0E8;
-                        padding: 8px;
-                        border-radius: 50%;
-                    }
-
-                    h3 {
-                        font-size: 1rem;
-                        font-weight: 700;
-                        color: #1a1a1a;
-                        margin-bottom: 4px;
-                    }
-
-                    p {
-                        font-size: 0.9rem;
-                        color: #666666;
-                        line-height: 1.4;
-                    }
-                }
-            }
-        }
-    }
+.search-group .input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-inline: 0.75rem;
 }
 
-/* ========== دا في الموبايل كاني هقوله لو الشاشه صغرت امسح الناف========== */
-@media screen and (max-width: 600px) {
-    header {
-        .container {
-            padding: 0 20px;
+.search-group .form-control {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: none;
+}
 
-            .nav-links {
-                display: none;
-            }
-        }
-    }
+.search-group .form-control:focus {
+    border-color: var(--border);
+    box-shadow: none;
+}
 
-    .hero {
-        padding: 56px 20px;
+.search-group .form-control::placeholder {
+    color: #ADB5BD;
+}
 
-        .container {
-            .hero__title {
-                font-size: 2.2rem;
-                max-width: none;
-            }
+/* Product cards */
+.product-card {
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: #fff;
+}
 
-            .hero__actions {
-                width: 100%;
-                flex-direction: column;
+.product-card .card-img-top {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: #F1F3F5;
+}
 
-                .btn {
-                    width: 100%;
-                    justify-content: center;
-                }
-            }
-        }
-    }
+.product-card .card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
 
-    .our-story {
-        padding: 56px 20px;
+.product-price {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
 
-        .container {
-            flex-direction: column;
-            gap: 32px;
+.btn-add-cart {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+    font-weight: 500;
+}
 
-            .our-story__image {
-                width: 100%;
-            }
+.btn-add-cart:hover,
+.btn-add-cart:focus {
+    background-color: #6435e8;
+    border-color: #6435e8;
+    color: #fff;
+}
 
-            .our-story__content {
-                width: 100%;
+.btn-remove-cart {
+    background-color: var(--danger);
+    border-color: var(--danger);
+    color: #fff;
+    font-weight: 500;
+}
 
-                .our-story__title {
-                    font-size: 1.8rem;
-                }
-
-                .our-story__features {
-                    flex-direction: column;
-                    gap: 20px;
-                }
-            }
-        }
-    }
+.btn-remove-cart:hover,
+.btn-remove-cart:focus {
+    background-color: #bb2d3b;
+    border-color: #bb2d3b;
+    color: #fff;
 }

@@ -1,115 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gourmet Bistro</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css"/>
+    <title>EraaStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
 
-    <header>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
         <div class="container">
-            <a class="logo" href="#">
-                <img class="logo__icon" src="./assets/images/chef-hat.png" alt="Gourmet Bistro logo">
-                <span class="logo__text">Gourmet Bistro</span>
+            <a class="navbar-brand m-0" href="#">
+                <img src="./assets/images/logo.svg" alt="EraaStore" width="114" height="48">
             </a>
 
-            <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="./menu.html">Menu</a>
-                <a href="#our-story">Our Story</a>
-                <a href="#">Gallery</a>
-            </div>
-
-            <a class="btn btn--nav" href="#">Book a Table</a>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <p class="hero__eyebrow">The Art of Dining</p>
-
-            <h1 class="hero__title">
-                Elevated culinary
-                <span class="hero__accent">experiences</span>
-                for every palate.
-            </h1>
-
-            <p class="hero__text">
-                Discover a symphony of flavors crafted with locally sourced ingredients and exceptional passion.
-            </p>
-
-            <div class="hero__actions">
-                <a class="btn btn--primary" href="./menu.html">
-                    <img class="btn__icon" src="./assets/images/menu-icon.png" alt="">
-                    View Menu
-                </a>
-
-                <a class="btn btn--secondary" href="#">
-                    Book a Table
-                </a>
-            </div>
-
-            <div class="hero__rating">
-                <div class="hero__avatars">
-                    <span class="hero__avatar avatar-1"></span>
-                    <span class="hero__avatar avatar-2"></span>
-                    <span class="hero__avatar avatar-3"></span>
+            <form class="search-form mx-auto d-none d-md-block" role="search">
+                <div class="input-group search-group">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="bi bi-search text-secondary"></i>
+                    </span>
+                    <input class="form-control border-start-0" type="search"
+                        placeholder="phone, keyboard, headset, etc.." aria-label="Search">
                 </div>
-                <p class="hero__rating-text">
-                    <strong>4.9/5</strong> from over 2,000+ happy diners
-                </p>
+            </form>
+
+            <div class="d-flex align-items-center gap-3">
+                <a href="#products" class="nav-link text-dark fw-medium">Products</a>
+                <a href="#" class="cart-link position-relative d-inline-flex" aria-label="Shopping cart">
+                    <img src="./assets/images/cart.svg" alt="cart" width="66" height="42">
+                </a>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- ========== OUR STORY SECTION ========== -->
-    <section class="our-story" id="our-story">
+   
+    <main class="py-4" id="products">
         <div class="container">
-            <!-- العمود الشمال: الصورة (فيها شارة 15+ من الفيجما) -->
-            <div class="our-story__image">
-                <img src="./assets/images/about-chef.png" alt="Chef plating a gourmet dish">
-            </div>
-
-            <!-- العمود اليمين: النصوص -->
-            <div class="our-story__content">
-                <h2 class="our-story__title">
-                    Crafting stories on every plate since
-                    <span class="our-story__accent-text">2008.</span>
-                </h2>
-
-                <p class="our-story__text">
-                    What began as a humble passion project has blossomed into a culinary destination where tradition meets innovation. Every dish tells a story of dedication, creativity, and the finest ingredients.
-                </p>
-
-                <p class="our-story__text">
-                    Our chefs blend time-honored techniques with contemporary flair, creating unforgettable dining experiences that celebrate the art of gastronomy.
-                </p>
-
-                <div class="our-story__features">
-                    <div class="our-story__feature">
-                        <img class="our-story__feature-icon" src="./assets/images/leaf-icon.png" alt="">
-                        <div>
-                            <h3>Fresh Harvest</h3>
-                            <p>Daily sourced organic ingredients</p>
-                        </div>
-                    </div>
-
-                    <div class="our-story__feature">
-                        <img class="our-story__feature-icon" src="./assets/images/chef-icon.png" alt="">
-                        <div>
-                            <h3>Expert Chefs</h3>
-                            <p>Award-winning culinary team</p>
+            <div class="row g-4">
+                <!-- 1. Black T-Shirt -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="./assets/images/card1.png" class="card-img-top" alt="Black T-Shirt">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-1">Black T-Shirt</h5>
+                            <p class="product-price mb-2">40$</p>
+                            <p class="card-text text-secondary small flex-grow-1">
+                                Quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <button type="button" class="btn btn-add-cart w-100">Add To Cart</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- 2. Black Watch -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="./assets/images/card2.png" class="card-img-top" alt="Black Watch">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-1">Black Watch</h5>
+                            <p class="product-price mb-2">140$</p>
+                            <p class="card-text text-secondary small flex-grow-1">
+                                Quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <button type="button" class="btn btn-add-cart w-100">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Blue Back Bag -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="./assets/images/card3.png" class="card-img-top" alt="Blue Back Bag">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-1">Blue Back Bag</h5>
+                            <p class="product-price mb-2">80$</p>
+                            <p class="card-text text-secondary small flex-grow-1">
+                                Quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <button type="button" class="btn btn-remove-cart w-100">Remove From Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Gaming Keyboard -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="./assets/images/card4.png" class="card-img-top" alt="Gaming Keyboard">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-1">Gaming Keyboard</h5>
+                            <p class="product-price mb-2">58$</p>
+                            <p class="card-text text-secondary small flex-grow-1">
+                                Quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <button type="button" class="btn btn-add-cart w-100">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Modern Headset -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="./assets/images/card5.png" class="card-img-top" alt="Modern Headset">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-1">Modern Headset</h5>
+                            <p class="product-price mb-2">100$</p>
+                            <p class="card-text text-secondary small flex-grow-1">
+                                Quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <button type="button" class="btn btn-add-cart w-100">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Purple Hand Bag -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="./assets/images/card6.png" class="card-img-top" alt="Purple Hand Bag">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-1">Purple Hand Bag</h5>
+                            <p class="product-price mb-2">24$</p>
+                            <p class="card-text text-secondary small flex-grow-1">
+                                Quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <button type="button" class="btn btn-remove-cart w-100">Remove From Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Red T-Shirt -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="./assets/images/card7.png" class="card-img-top" alt="Red T-Shirt">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-1">Red T-Shirt</h5>
+                            <p class="product-price mb-2">36$</p>
+                            <p class="card-text text-secondary small flex-grow-1">
+                                Quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <button type="button" class="btn btn-add-cart w-100">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Smart Phone -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="./assets/images/card8.png" class="card-img-top" alt="Smart Phone">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-1">Smart Phone</h5>
+                            <p class="product-price mb-2">480$</p>
+                            <p class="card-text text-secondary small flex-grow-1">
+                                Quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <button type="button" class="btn btn-add-cart w-100">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
